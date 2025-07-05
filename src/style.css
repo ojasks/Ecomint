@@ -1,0 +1,86 @@
+/* src/styles/style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  border-radius: 5px;
+  
+}
+
+.popup-container {
+  width: 450px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.score-card {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.token-section {
+  font-size: 18px;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.activity-log {
+  font-size: 14px;
+  background: #f0f4f8;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+.log-card-button{
+  background-color: #7dc347;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: 1px solid #2e7d32 ;
+  padding: 5px;
+  margin-right: 0px;
+  margin-left: 150px;
+  font-weight: 300;
+  font-size: medium;
+  border-radius: 9px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.log-card-button:active{
+   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.store-header{
+  padding: none;
+  font-weight: 300;
+  font-size: x-small;
+  text-align: left;
+  justify-content: left;
+}
+.point-card{
+  text-align: right;
+  font-size: small;
+  justify-content: right;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  border-radius: 10px solid black;
+  background-color: #4caf50;
+}
