@@ -93,6 +93,7 @@ html,body {
   padding-top: 5px;
 
 }
+
 .score-card{
   display: grid;
   margin-left: 200px;
@@ -102,11 +103,12 @@ html,body {
 .score-card-value,.score-card-button{
   display: flex;
   justify-content: space-between;
+  padding: 1.5px;
 }
 .score-card-value{
   font-size: xx-large;
   font-weight: 200;
-  padding: 4px;
+  padding: 1px;
   
 }
 .score-card-button{
@@ -121,7 +123,7 @@ html,body {
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   margin-left: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 .score-card-button:active{
   transform: scale(1.2);
@@ -131,10 +133,11 @@ html,body {
   font-size: medium;
   padding: 4px;
 }
-.product-image{
-  width: 50px;
-  height: 65px;
-  align-self: last baseline;
+.lefter-container{
+
+  width: 20px;
+  height: 15px;
+  margin-right: 80px;
+  margin-bottom: 80px;
   
 }
-
