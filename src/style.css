@@ -16,7 +16,7 @@ html,body {
 .popup-container {
   border-radius: 12px; /* Adjust this value for more/less rounding */
   overflow: hidden; /* Ensures child elements respect the rounded corners */
-  width: 400px; /* Fixed width for consistency */
+  width: 360px; /* Fixed width for consistency */
   height: 245px;
   /* padding: 16px; */
   background: #ffffff ; /* Light background */
@@ -57,20 +57,22 @@ html,body {
   background-color: #7dc347;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border: 1px solid #2e7d32 ;
-  padding: 5px;
-  margin-right: 0px;
-  margin-left: 200px;
-  margin-top: 2px;
+  padding: 2px;
+  margin-right: 10px;
+  margin-left: 55px;
+  margin-top: 3px;
   font-weight: 300;
   font-size: smaller;
   border-radius: 7px;
   color: #ffffff;
-  text-align: center;
+  align-items: center;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
 .no-logs{
-  margin-left: 203px;
+  margin-left: 60px;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 .log-card-button:active{
    transform: scale(1.05);
@@ -96,9 +98,10 @@ html,body {
 
 .score-card{
   display: grid;
-  margin-left: 200px;
-  margin-top: 90px;
-  margin-right: 10px;
+   margin-left: 55px;
+  margin-top: 70px;
+  margin-right: 10px; ;
+  padding-bottom: 3px;
 }
 .score-card-value,.score-card-button{
   display: flex;
@@ -122,8 +125,7 @@ html,body {
   color: #ffffff;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  margin-left: 50px;
-  margin-bottom: 8px;
+  margin-bottom: 3px; 
 }
 .score-card-button:active{
   transform: scale(1.2);
@@ -131,13 +133,22 @@ html,body {
 .score-card-text{
   font-weight: 100;
   font-size: medium;
-  padding: 4px;
+  padding: 2px;
 }
 .lefter-container{
 
-  width: 20px;
-  height: 15px;
-  margin-right: 80px;
-  margin-bottom: 80px;
+  width: 160px;
+  height: 175px;
+  /* margin-right: 80px;
+  margin-bottom: 80px; */
+  margin-left: 20px;
+  margin-top: 20px;
   
+}
+
+.content-container{
+  display: flex;
+  flex-direction: row;    /* default, but explicit */
+  align-items: flex-start;  /* or center depending on your design */
+  /* justify-content: space-evenly; */
 }

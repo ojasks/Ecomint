@@ -8,8 +8,10 @@ const IndexPopup = () => {
   return (
     <div className="popup-container">
       <StoreInfo />
+      <div className="content-container">
+        <Lefter/>
       <RighterHead/>
-      <Lefter/>
+      </div>
     </div>
   )
 }
