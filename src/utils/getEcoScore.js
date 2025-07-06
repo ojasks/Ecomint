@@ -1,7 +1,21 @@
 export const getEcoScore = (name) => {
-  const title = name.toLowerCase()
-  if (title.includes("bamboo")) return "A"
-  if (title.includes("cotton")) return "B"
-  if (title.includes("plastic")) return "C"
-  return "D"
+  if (!name) return "D";
+  
+  const title = name.toLowerCase();
+  
+  // Positive matches
+  if (title.includes("bamboo") || 
+      title.includes("organic") ||
+      title.includes("recycled")) return "A";
+      
+  if (title.includes("cotton") ||
+      title.includes("paper") ||
+      title.includes("wood")) return "B";
+      
+  // Negative matches
+  if (title.includes("plastic") ||
+      title.includes("pvc") ||
+      title.includes("polystyrene")) return "D";
+      
+  return "C"; // Default for unknown products
 }

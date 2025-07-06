@@ -1,19 +1,42 @@
+const ALTERNATIVES_DB = {
+  "plastic bottle": {
+    name: "Stainless Steel Water Bottle",
+    url: "https://example.com/eco-bottle",
+    score: "A"
+  },
+  "plastic toothbrush": {
+    name: "Bamboo Toothbrush (4-pack)",
+    url: "https://example.com/bamboo-brush",
+    score: "A"
+  },
+  // Add more mappings
+  "plastic bag": {
+    name: "Organic Cotton Tote Bag",
+    url: "https://example.com/cotton-tote",
+    score: "A"
+  }
+};
+
 export const findAlternative = (name) => {
-  const lower = name.toLowerCase()
-
-  if (lower.includes("plastic bottle")) {
-    return {
-      name: "Bamboo Bottle",
-      url: "https://www.amazon.in/dp/B09XJ7BZT9"
+  if (!name) return null;
+  
+  const lower = name.toLowerCase();
+  
+  // Find exact matches first
+  for (const [keyword, alternative] of Object.entries(ALTERNATIVES_DB)) {
+    if (lower.includes(keyword)) {
+      return alternative;
     }
   }
-
-  if (lower.includes("plastic toothbrush")) {
+  
+  // Fallback for similar products
+  if (lower.includes("plastic")) {
     return {
-      name: "Bamboo Toothbrush",
-      url: "https://www.amazon.in/dp/B098TWR1TG"
-    }
+      name: "Eco-friendly Alternative Kit",
+      url: "https://example.com/eco-alternatives",
+      score: "B"
+    };
   }
-
-  return null
-}
+  
+  return null;
+};

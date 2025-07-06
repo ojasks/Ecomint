@@ -1,12 +1,12 @@
-import React from "react"
+import React from "react";
 
 const ScoreCard = () => {
   return (
     <div className="score-card">
-      <p><strong>Carbon Score Overview</strong></p>
-      <p>Sustainability Score</p>
+      <span className="score-card-value">8.4 <button className="score-card-button">🌿</button></span>
+      <span className="score-card-text">Sustainability Score</span>
     </div>
-  )
-}
+  );
+};
 
-export default ScoreCard
+export default ScoreCard;
