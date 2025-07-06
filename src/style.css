@@ -70,7 +70,7 @@ html,body {
   transition: all 0.1s ease-in-out;
 }
 .no-logs{
-  margin-left: 202px;
+  margin-left: 203px;
 }
 .log-card-button:active{
    transform: scale(1.05);
@@ -107,6 +107,7 @@ html,body {
   font-size: xx-large;
   font-weight: 200;
   padding: 4px;
+  
 }
 .score-card-button{
    background-color: #ffffff;
@@ -119,7 +120,8 @@ html,body {
   color: #ffffff;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  margin-left: 90px;
+  margin-left: 50px;
+  margin-bottom: 15px;
 }
 .score-card-button:active{
   transform: scale(1.2);
@@ -127,5 +129,12 @@ html,body {
 .score-card-text{
   font-weight: 100;
   font-size: medium;
-  padding: 6px;
+  padding: 4px;
 }
+.product-image{
+  width: 50px;
+  height: 65px;
+  align-self: last baseline;
+  
+}
+

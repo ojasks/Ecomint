@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
+
 function StoreInfo() {
   const [storeName, setStoreName] = useState("");
   const [productName, setProductName] = useState("");
-  const [ecoScore, setEcoScore] = useState(null);
+  const [productImage, setProductImage] = useState(null);
 
   const getCurrentStoreName = async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -18,41 +19,32 @@ function StoreInfo() {
     }
   };
 
-  const fetchEcoScore = async (productName) => {
-    try {
-      const res = await fetch("https://api.demo.openlca.org/v1/calculate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product: productName }),
-      });
-
-      const data = await res.json();
-      setEcoScore(data.score);
-    } catch (err) {
-      console.error("Failed to fetch score", err);
+  useEffect(() => {
+    getCurrentStoreName();
+  const listener = (message) => {
+    if (message.type === "PRODUCT_HOVERED") {
+      setProductName(message.name);
+      setProductImage(message.image);
+      fetchEcoScore(message.name);
     }
   };
 
-  useEffect(() => {
-    getCurrentStoreName();
-    
-    chrome.runtime.onMessage.addListener((message) => {
-      if (message.type === "PRODUCT_HOVERED") {
-        setProductName(message.name);
-        fetchEcoScore(message.name);
-      }
-    });
-    
-    // Clean up the listener when component unmounts
-    return () => {
-      chrome.runtime.onMessage.removeListener();
-    };
-  }, []);
+  chrome.runtime.onMessage.addListener(listener);
+
+  return () => {
+    chrome.runtime.onMessage.removeListener(listener);
+  };
+}, []);
 
   return (
+    <div>
     <div className="header-container">
       <span>STORE: {storeName || "Unknown Site"}</span>
-      <span>EcoTokens: 🌿{ecoScore ?? "—"}</span>
+      <span>EcoTokens: 🌿{Math.floor((Math.random()*10000))}</span>
+    </div>
+    <span className="product-image">
+      {productImage && <img src={productImage} alt={productName}  />}
+    </span>
     </div>
   );
 }
