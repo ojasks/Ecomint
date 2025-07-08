@@ -1,0 +1,29 @@
+{
+  "extends": "plasmo/templates/tsconfig.base",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "outDir": "dist"
+  },
+  "include": [
+    ".plasmo/index.d.ts",
+    "src/**/*",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    ".plasmo",
+    "extension/.plasmo",
+    "dist",
+    "build"
+  ]
+}

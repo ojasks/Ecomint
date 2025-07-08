@@ -1,0 +1,154 @@
+/* src/styles/style.css */
+
+html,body {
+  min-width: 350px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  
+}
+
+
+.popup-container {
+  border-radius: 12px; /* Adjust this value for more/less rounding */
+  overflow: hidden; /* Ensures child elements respect the rounded corners */
+  width: 360px; /* Fixed width for consistency */
+  height: 245px;
+  /* padding: 16px; */
+  background: #ffffff ; /* Light background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+}
+/* .popup-container {
+  width: 450px;
+  height: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* h1, h2 {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
+} */
+
+
+.token-section {
+  font-size: 18px;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.activity-log {
+  font-size: 14px;
+  background: #f0f4f8;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+.log-card-button{
+  background-color: #7dc347;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: 1px solid #2e7d32 ;
+  padding: 2px;
+  margin-right: 10px;
+  margin-left: 55px;
+  margin-top: 3px;
+  font-weight: 300;
+  font-size: smaller;
+  border-radius: 7px;
+  color: #ffffff;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.no-logs{
+  margin-left: 60px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.log-card-button:active{
+   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.point-card{
+  text-align: right;
+  font-size: small;
+  justify-content: right;
+}
+.header-container {
+  margin: 2px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 16px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding-top: 5px;
+
+}
+
+.score-card{
+  display: grid;
+   margin-left: 55px;
+  margin-top: 70px;
+  margin-right: 10px; ;
+  padding-bottom: 3px;
+}
+.score-card-value,.score-card-button{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5px;
+}
+.score-card-value{
+  font-size: xx-large;
+  font-weight: 200;
+  padding: 1px;
+  
+}
+.score-card-button{
+   background-color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: 3px solid #2e7d32 ;
+  padding: 4px;
+  font-weight: 300;
+  font-size: medium;
+  border-radius: 9px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  margin-bottom: 3px; 
+}
+.score-card-button:active{
+  transform: scale(1.2);
+}
+.score-card-text{
+  font-weight: 100;
+  font-size: medium;
+  padding: 2px;
+}
+.lefter-container{
+
+  width: 160px;
+  height: 175px;
+  /* margin-right: 80px;
+  margin-bottom: 80px; */
+  margin-left: 20px;
+  margin-top: 20px;
+  
+}
+
+.content-container{
+  display: flex;
+  flex-direction: row;    /* default, but explicit */
+  align-items: flex-start;  /* or center depending on your design */
+  /* justify-content: space-evenly; */
+}
