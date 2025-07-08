@@ -21,6 +21,7 @@ For further guidance, [visit our Documentation](https://docs.plasmo.com/)
 Run the following:
 
 ```bash
+pnpm install
 pnpm build
 # or
 npm run build
